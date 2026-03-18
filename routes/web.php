@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MovieController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -22,3 +23,7 @@ Route::get('/Huong', function () {
 Route::get('/legialoc', function () {
     return "LeGiaLoc";
 });
+
+
+//7.2
+Route::get('/top-movies', [MovieController::class, 'topMovies']);
