@@ -13,7 +13,6 @@ Route::get('/test', [\App\Http\Controllers\TestController::class, 'test']);
 Route::get('/Nhi', function () {
     return "NguyenThiYenNhi";
 });
-
 Route::get('/lenhi', function () {
     return 'NguyenLeYenNhi';
 });
@@ -23,8 +22,6 @@ Route::get('/Huong', function () {
 
 Route::get('/legialoc', function () {
     return "LeGiaLoc";
-});
-
-
 //7.2
 Route::get('/top-movies', [MovieController::class, 'topMovies']);
+//7.4Route::get('/phim/thoi-luong', [MovieController::class, 'longRuntime']);
