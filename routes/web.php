@@ -13,6 +13,9 @@ Route::get('/Nhi', function () {
     return "NguyenThiYenNhi";
 });
 
+Route::get('/lenhi', function () {
+    return 'NguyenLeYenNhi';
+});
 Route::get('/Huong', function () {
     return "BuiThiThuHuong";
 });
