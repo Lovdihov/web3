@@ -1,3 +1,21 @@
+<table border="1">
+
+<tr>
+    <th>STT</th>
+    <th>Tên phim</th>
+    <th>Ngày phát hành</th>
+    <th>Điểm bình chọn</th>
+</tr>
+
 @foreach($movies as $index => $movie)
-    {{ $index + 1 }}. Tên phim: {{ $movie->movie_name }} | Ngày phát hành: {{ $movie->release_date }} | Điểm bình chọn: {{ $movie->vote_average }} <br>
+
+<tr>
+    <td>{{ $index + 1 }}</td>
+    <td>{{ $movie->movie_name }}</td>
+    <td>{{ $movie->release_date }}</td>
+    <td>{{ $movie->vote_average }}</td>
+</tr>
+
 @endforeach
+
+</table>

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MovieController;
+use Illuminate\Support\Facades\DB;
 
 Route::get('/', function () {
     return view('welcome');
@@ -13,27 +14,29 @@ Route::get('/test', [\App\Http\Controllers\TestController::class, 'test']);
 Route::get('/Nhi', function () {
     return "NguyenThiYenNhi";
 });
+
 Route::get('/lenhi', function () {
     return 'NguyenLeYenNhi';
 });
+
 Route::get('/Huong', function () {
     return "BuiThiThuHuong";
 });
 
 Route::get('/legialoc', function () {
     return "LeGiaLoc";
-<<<<<<< HEAD
+});
+
 //7.1
-Route::get('/theloai', '\App\Http\Controllers\Movie@theloai');//7.2
+Route::get('/theloai', '\App\Http\Controllers\Movie@theloai');
+
+//7.2
 Route::get('/top-movies', [MovieController::class, 'topMovies']);
 
 //7.4
 Route::get('/phim/thoi-luong', [MovieController::class, 'longRuntime']);
-=======
-});
 
-use Illuminate\Support\Facades\DB;
-
+// top budget
 Route::get('/top-budget', function () {
 
     $movies = DB::table('movie')
@@ -42,6 +45,4 @@ Route::get('/top-budget', function () {
         ->get();
 
     return view('top_budget', compact('movies'));
-
 });
->>>>>>> remotes/origin/Nhi

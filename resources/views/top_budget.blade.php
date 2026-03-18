@@ -1,13 +1,19 @@
-<h2>Top 10 Movie Budget</h2>
+<table border="1">
+
+<tr>
+<th>Tên phim</th>
+<th>Ngày phát hành</th>
+<th>Runtime</th>
+</tr>
 
 @foreach($movies as $m)
 
-<p>
-Tên phim: {{ $m->movie_name }} <br>
-Ngày phát hành: {{ $m->release_date }} <br>
-Budget: {{ $m->budget }}
-</p>
-
-<hr>
+<tr>
+<td>{{ $m->movie_name }}</td>
+<td>{{ $m->release_date }}</td>
+<td>{{ $m->runtime }}</td>
+</tr>
 
 @endforeach
+
+</table>
