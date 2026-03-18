@@ -22,6 +22,9 @@ Route::get('/Huong', function () {
 
 Route::get('/legialoc', function () {
     return "LeGiaLoc";
-//7.2
+//7.1
+Route::get('/theloai', '\App\Http\Controllers\Movie@theloai');//7.2
 Route::get('/top-movies', [MovieController::class, 'topMovies']);
-//7.4Route::get('/phim/thoi-luong', [MovieController::class, 'longRuntime']);
+
+//7.4
+Route::get('/phim/thoi-luong', [MovieController::class, 'longRuntime']);
