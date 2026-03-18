@@ -12,3 +12,7 @@ Route::get('/test', [\App\Http\Controllers\TestController::class, 'test']);
 Route::get('/Nhi', function () {
     return "NguyenThiYenNhi";
 });
+
+Route::get('/lenhi', function () {
+    return 'NguyenLeYenNhi';
+});
