@@ -22,3 +22,5 @@ Route::get('/Huong', function () {
 Route::get('/legialoc', function () {
     return "LeGiaLoc";
 });
+
+Route::get('/theloai', '\App\Http\Controllers\Movie@theloai');
