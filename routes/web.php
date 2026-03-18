@@ -13,3 +13,5 @@ Route::get('/test', [\App\Http\Controllers\TestController::class, 'test']);
 Route::get('/lenhi', function () {
     return 'NguyenLeYenNhi';
 });
+
+
