@@ -16,3 +16,7 @@ Route::get('/Nhi', function () {
 Route::get('/lenhi', function () {
     return 'NguyenLeYenNhi';
 });
+
+Route::get('/legialoc', function () {
+    return "LeGiaLoc";
+});
