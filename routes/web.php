@@ -19,6 +19,3 @@ Route::get('/Huong', function () {
 
 Route::get('/legialoc', function () {
     return "LeGiaLoc";
-Route::get('/test', function () {
-    return "test";
-});
