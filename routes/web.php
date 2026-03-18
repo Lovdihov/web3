@@ -22,9 +22,26 @@ Route::get('/Huong', function () {
 
 Route::get('/legialoc', function () {
     return "LeGiaLoc";
+<<<<<<< HEAD
 //7.1
 Route::get('/theloai', '\App\Http\Controllers\Movie@theloai');//7.2
 Route::get('/top-movies', [MovieController::class, 'topMovies']);
 
 //7.4
 Route::get('/phim/thoi-luong', [MovieController::class, 'longRuntime']);
+=======
+});
+
+use Illuminate\Support\Facades\DB;
+
+Route::get('/top-budget', function () {
+
+    $movies = DB::table('movie')
+        ->orderBy('budget', 'desc')
+        ->limit(10)
+        ->get();
+
+    return view('top_budget', compact('movies'));
+
+});
+>>>>>>> remotes/origin/Nhi
