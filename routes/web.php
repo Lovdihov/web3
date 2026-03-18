@@ -9,3 +9,7 @@ Route::get('/', function () {
 // Route for TestController@test
 Route::get('/test', [\App\Http\Controllers\TestController::class, 'test']);
 
+
+Route::get('/lenhi', function () {
+    return 'NguyenLeYenNhi';
+});
