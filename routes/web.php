@@ -27,3 +27,4 @@ Route::get('/legialoc', function () {
 
 //7.2
 Route::get('/top-movies', [MovieController::class, 'topMovies']);
+Route::get('/theloai', '\App\Http\Controllers\Movie@theloai');
