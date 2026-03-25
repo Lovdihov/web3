@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MovieController;
 use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\BookController_3;
 
 Route::get('/', function () {
     return view('welcome');
@@ -46,3 +47,7 @@ Route::get('/top-budget', function () {
 
     return view('top_budget', compact('movies'));
 });
+//nhi
+use App\Http\Controllers\BookController;
+
+Route::get('/book/{id}', [BookController::class, 'show']);
