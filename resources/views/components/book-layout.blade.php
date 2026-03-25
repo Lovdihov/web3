@@ -1,3 +1,3 @@
 <div>
-    <!-- Because you are alive, everything is possible. - Thich Nhat Hanh -->
+    <!-- Be present above all else. - Naval Ravikant -->
 </div>
