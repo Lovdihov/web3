@@ -3,6 +3,26 @@
 <head>
     <title>{{$title}}</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        .navbar {
+            background-color: #ff5850;
+            font-weight:bold;
+        }
+        .nav-item a {
+            color: #fff!important;
+        }
+        .navbar-nav {
+            margin:0 auto;
+        }
+        .list-book{
+            display:grid;
+            grid-template-columns:repeat(4,24%);
+        }
+        .book {  
+            margin:10px;
+            text-align:center;
+        }
+    </style>
 </head>
 <body>
     <header style='text-align:center'>
@@ -15,16 +35,16 @@
                 <nav class="navbar navbar-light">
                     <ul class="navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link" href="">Trang chủ</a>
+                            <a class="nav-link" href="{{url('sach')}}">Trang chủ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Tiểu thuyết</a>
+                            <a class="nav-link" href="{{url('sach/theloai/1')}}">Tiểu thuyết</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Truyện ngắn - tản văn</a>
+                            <a class="nav-link" href="{{url('sach/theloai/2')}}">Truyện ngắn - tản văn</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="">Tác phẩm kinh điển</a>
+                            <a class="nav-link" href="{{url('sach/theloai/3')}}">Tác phẩm kinh điển</a>
                         </li>
                     </ul>
                 </nav>
