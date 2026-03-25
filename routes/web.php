@@ -47,7 +47,3 @@ Route::get('/top-budget', function () {
 
     return view('top_budget', compact('movies'));
 });
-//nhi
-use App\Http\Controllers\BookController;
-
-Route::get('/book/{id}', [BookController::class, 'show']);
