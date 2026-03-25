@@ -40,3 +40,6 @@ Route::get('/top-budget', function () {
     return view('top_budget', compact('movies'));
 
 });
+
+use App\Http\Controllers\SachChiTietController;
+Route::get('/sach/chitiet/{id}', 'App\Http\Controllers\SachChiTietController@chitiet');
