@@ -45,3 +45,4 @@ Route::get('/top-budget', function () {
 
 //Layout
 Route::get('/sach', [BookController::class, 'sach']);
+Route::get('/sach/theloai/{id}','App\Http\Controllers\BookController@theloai');
