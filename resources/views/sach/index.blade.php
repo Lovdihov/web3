@@ -3,8 +3,15 @@
         Sách
     </x-slot>
 
-    <div style="padding: 20px; border: 1px dashed #ccc; text-align: center;">
-        <h2 class="text-primary">HIỂN THỊ CÁC CUỐN SÁCH</h2>
-        
+    <div class='list-book'>
+        @foreach($data as $row)
+            <div class='book'>
+                <a href="{{url('sach/chitiet/'.$row->id)}}">
+                    <img src="{{asset('hinh/'.$row->file_anh_bia)}}" width='200px' height='200px'><br>
+                    <b>{{$row->tieu_de}}</b><br/>
+                    <i>{{number_format($row->gia_ban,0,",",".")}}đ</i>
+                </a>
+            </div>
+        @endforeach
     </div>
 </x-book-layout>
