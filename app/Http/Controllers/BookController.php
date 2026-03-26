@@ -14,7 +14,7 @@ class BookController extends Controller
     }
     function theloai($id)
     {
-        $data = DB::select("select * from sach where the_loai = ?",[$id]);
+        $data = DB::select("select * from sach where the_loai = ? limit 0,8",[$id]);
         return view("sach.index", compact("data"));
     }
 

@@ -19,3 +19,17 @@ class MovieController extends Controller
         return view('movie2', compact('movies'));
     }
 }
+    public function longRuntime()
+    {
+        // Lấy 10 phim có runtime > 120
+        $movies = DB::table('movie')
+                    ->where('runtime', '>', 120)
+                    ->limit(10)
+                    ->get();
+        
+        return view('movies.long_runtime', compact('movies'));
+    }
+}
+
+
+
