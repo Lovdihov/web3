@@ -43,6 +43,10 @@ Route::get('/top-budget', function () {
 
 });
 
+
+use App\Http\Controllers\SachChiTietController;
+Route::get('/sach/chitiet/{id}', 'App\Http\Controllers\SachChiTietController@chitiet');
+
 //Layout
 Route::get('/sach', [BookController::class, 'sach']);
-Route::get('/sach/theloai/{id}','App\Http\Controllers\BookController@theloai');
+
