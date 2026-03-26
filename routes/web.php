@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MovieController;
+use App\Http\Controllers\BookController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -27,6 +28,7 @@ Route::get('/legialoc', function () {
 
 //7.2
 Route::get('/top-movies', [MovieController::class, 'topMovies']);
+//7.
 Route::get('/theloai', '\App\Http\Controllers\Movie@theloai');
 use Illuminate\Support\Facades\DB;
 
@@ -41,5 +43,10 @@ Route::get('/top-budget', function () {
 
 });
 
+
 use App\Http\Controllers\SachChiTietController;
 Route::get('/sach/chitiet/{id}', 'App\Http\Controllers\SachChiTietController@chitiet');
+
+//Layout
+Route::get('/sach', [BookController::class, 'sach']);
+
