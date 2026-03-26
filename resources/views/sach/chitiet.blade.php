@@ -1,11 +1,11 @@
-
 <x-book-layout>
-    <x-slot name='title'>
-        Sách
+    <x-slot name="title">
+        Chi tiết sách
     </x-slot>
+
     <div class="row">
         <div class="col-5">
-            <img src="{{asset('book_image/'.$data->file_anh_bia)}}" width="100%">
+            <img src="{{asset('hinh/image/'.$data->file_anh_bia)}}" width="100%">
         </div>
         <div class="col-7">
             <h3>{{$data->tieu_de}}</h3>
