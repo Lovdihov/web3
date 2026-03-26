@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\SachChiTietController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -44,9 +45,10 @@ Route::get('/top-budget', function () {
 });
 
 
-use App\Http\Controllers\SachChiTietController;
+
+//Layout1
+Route::get('/sach', 'App\Http\Controllers\BookController@sach');
+//Layout2
+Route::get('/sach/theloai/{id}','App\Http\Controllers\BookController@theloai');
+//Layout3
 Route::get('/sach/chitiet/{id}', 'App\Http\Controllers\SachChiTietController@chitiet');
-
-//Layout
-Route::get('/sach', [BookController::class, 'sach']);
-
